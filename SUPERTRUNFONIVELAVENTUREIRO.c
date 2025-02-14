@@ -27,7 +27,7 @@ int main() {
     printf("Código da cidade é: %d\n", codigo);
 
     printf("Digite o nome da cidade: \n");
-    scanf("%s", &nome); // nome = Goiãnia
+    scanf("%s", &nome); // nome = Goiânia
     printf("O nome da cidade é: %s\n", nome);
 
     printf("Digite o numero de População: \n", populacao);
@@ -36,11 +36,11 @@ int main() {
 
     printf("Digite a área por km² da sua cidade: \n", area);
     scanf("%f", &area); //area = 1521.11
-    printf("A área por km² da sua cidade é de: %.2f\n", area);
+    printf("A área por km² da sua cidade é de: %.2f km²\n", area);
 
     printf("Digite o PIB da sua cidade: \n");
     scanf("%f", &pib); // pib = 699.28
-    printf("O PIB da sua cidade é : %.2f\n", pib);
+    printf("O PIB da sua cidade é : %.2f Bilhões de reais\n", pib);
 
     printf("Digite quantos pontos turísticos tem sua cidade: \n");
     scanf("%d", &pontosturisticos); // pontos turísticos = 50
@@ -50,7 +50,7 @@ int main() {
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-    printf(" *** RESULTADO DE DADOS DAS CIDADES ***\n");
+    printf(" *** RESULTADO DE DADOS DA CIDADE ***\n");
 
     printf("Código da cidade: %d\n" , codigo);
     printf("Nome da cidade: %s\n", nome);
