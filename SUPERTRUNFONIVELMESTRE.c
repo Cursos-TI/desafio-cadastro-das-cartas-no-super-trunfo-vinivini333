@@ -9,8 +9,8 @@
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    char estado [2]; 
-    char ESTADO [2];
+    char estado [1]; 
+    char ESTADO [1];
     char codigo [25];
     char CODIGO [25];
     char nome [25];
@@ -76,7 +76,7 @@ int main() {
     printf("PIB da cidade: %.2f Bilhões de reais\n",  pib);
     printf("Pontos turísticos da cidade: %d\n", pontosturisticos);
 
-    float densidade = populacao / area;    //VARIÁVEIS COM TAMANHO DE PRIMEIRA LETRA DIFERENTES PARA CADA CARTA
+    float densidade = populacao / area;    //VARIÁVEIS COM TAMANHO DE LETRA DIFERENTES PARA CADA CARTA
     float percapita = pib / populacao;
   
     printf("Densidade Populacional : %.2f Pessoas/km²\n", densidade);
@@ -138,16 +138,31 @@ int main() {
     printf("PIB da cidade: %.2f Bilhões de reais\n",  PIB);
     printf("Pontos turísticos da cidade: %d\n", PONTOSTURISTICOS);
                          
-    float Densidade = POPULACAO / AREA;       //VARIÁVEIS COM TAMANHO DE PRIMEIRA LETRA DIFERENTES PARA CADA CARTA
-    float Percapita = PIB / POPULACAO;
+    float DENSIDADE = POPULACAO / AREA;       //VARIÁVEIS COM TAMANHO DE LETRA DIFERENTES PARA CADA CARTA
+    float PERCAPITA = PIB / POPULACAO;
   
-    printf("Densidade Populacional : %.2f Pessoas/km²\n", Densidade);
-    printf("PIB Per Capita: %.9f Reais\n", Percapita);
+    printf("Densidade Populacional : %.2f Pessoas/km²\n", DENSIDADE);
+    printf("PIB Per Capita: %.9f Reais\n", PERCAPITA);
 
-    unsigned long int Populacao1 = POPULACAO; 
-    float Poder = Populacao1 += AREA += PIB += PONTOSTURISTICOS += Densidade += Percapita;
+    unsigned long int Populacao1 = POPULACAO; //VARIÁVEL "Populacao1" diferente
+    float PODER = Populacao1 += AREA += PIB += PONTOSTURISTICOS += DENSIDADE += PERCAPITA;
 
-    printf("Super poder : %f\n", Poder);
+    printf("Super poder : %f\n", PODER);
     
+    int resultado1 = populacao > POPULACAO;
+    int resultado2 = area > AREA;
+    int resultado3 = pib > PIB;
+    int resultado4 = pontosturisticos > PONTOSTURISTICOS;
+    int resultado5 = densidade < DENSIDADE;
+    int resultado6 = percapita > PERCAPITA;
+    int resultado7 = poder > PODER;
+
+    printf("resultado População: %d\n", resultado1);
+    printf("resultado Área por km²: %d\n", resultado2);
+    printf("resultado Pib: %d\n", resultado3);
+    printf("resultado Pontos Turísticos: %d\n", resultado4);
+    printf("resultado Deinsidade Populacional: %d\n", resultado5);
+    printf("resultado PIB Percapita: %d\n", resultado6);
+    printf("resultado Poder: %d\n", resultado7);
     return 0;
 }
