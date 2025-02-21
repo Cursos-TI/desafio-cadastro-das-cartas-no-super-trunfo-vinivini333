@@ -188,5 +188,6 @@ int main() {
      {
        printf("Super Poder : Carta 2 venceu\n");
      }
+     
     return 0;
 }
