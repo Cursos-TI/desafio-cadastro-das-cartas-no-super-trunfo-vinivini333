@@ -6,10 +6,10 @@
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    char estado ; 
+    char estado [2]; 
     char ESTADO [2] ;
-    char codigo [3];
-    char CODIGO [3];
+    char codigo [25]; 
+    char CODIGO [25];
     char nome [25];
     char NOME [25];  
     int populacao;
@@ -29,18 +29,18 @@ int main() {
     printf("Carta 1 :\n");
 
     printf("Digite o Estado: \n");
-    scanf("%c", &estado); // estado = 'A'
+    scanf("%s", estado); // estado = 'A'
   
     printf("Digite o código da cidade: \n");
-    scanf("%s", &codigo); // código = A01 
-    
+    scanf("%s", codigo); // código = A01 
+    getchar();//necessário sempre o uso de getchar ao ultizar função para permitir espaço
     printf("Digite o nome da cidade: \n");
-    scanf("%s", &nome); // nome = SÃO PAULO
+    scanf("%[^\n]", nome); // nome = SÃO PAULO , // função %[^\n] para permitir espaço 
    
-    printf("Digite o numero de População: \n", populacao);
+    printf("Digite o numero de População: \n");
     scanf("%d", &populacao); //populaçao = 12325000
     
-    printf("Digite a área por km² da sua cidade: \n", area);
+    printf("Digite a área por km² da sua cidade: \n");
     scanf("%f", &area); //area = 1521.11
     
     printf("Digite o PIB da sua cidade: \n");
@@ -54,13 +54,13 @@ int main() {
     printf(" *** RESULTADO DE DADOS ***\n");
 
     printf("CARTA 1 :\n");
-    printf("Estado: %c\n", estado);
-    printf("Código da cidade: %s\n" , codigo);
-    printf("Nome da cidade: %s\n", nome);
-    printf("População da cidade: %d\n", populacao);
-    printf("Área da cidade: %.2f km²\n", area);
-    printf("PIB da cidade: %.2f Bilhões de reais\n",  pib);
-    printf("Pontos turísticos da cidade: %d\n", pontosturisticos);
+    printf("Estado:%s\n", estado);
+    printf("Código da cidade:%s\n" , codigo);
+    printf("Nome da cidade:%s\n", nome);
+    printf("População da cidade:%d\n", populacao);
+    printf("Área da cidade:%.2f km²\n", area);
+    printf("PIB da cidade:%.2f Bilhões de reais\n",  pib);
+    printf("Pontos turísticos da cidade:%d\n", pontosturisticos);
 
     float densidade = populacao / area;    //VARIÁVEIS COM TAMANHO DE LETRA DIFERENTES PARA CADA CARTA
     float percapita = pib / populacao;
@@ -80,13 +80,13 @@ int main() {
     printf("Carta 2 :\n");
 
     printf("Digite o Estado: \n");
-    scanf("%s", &ESTADO); // estado = 'B'
+    scanf("%s", ESTADO); // estado = 'B'
 
     printf("Digite o código da cidade: \n");
-    scanf("%s", &CODIGO); // código = B02 
-
+    scanf("%s", CODIGO); // código = B02 
+    getchar(); //necessário sempre o uso de getchar ao ultizar função para permitir espaço
     printf("Digite o nome da cidade: \n");
-    scanf("%s", &NOME); // nome = RiodeJaneiro
+    scanf("%[^\n]", NOME); // nome = RiodeJaneiro //funçaõ %[^\n] para permitir espaço 
 
     printf("Digite o numero de População: \n");
     scanf("%d", &POPULACAO); //populaçao = 6748000
@@ -172,7 +172,7 @@ int main() {
      {
        printf("Densidade Populacional : Carta 2 venceu\n");
      }
-     if(percapita<PERCAPITA)
+     if(percapita>PERCAPITA)
       {
         printf("PIB Per Capita : Carta 1 venceu\n");
       }
